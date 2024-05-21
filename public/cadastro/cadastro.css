@@ -1,0 +1,75 @@
+
+.cadastro {
+    margin-top: 2.5rem;
+    background-color: #444444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-left: 10rem ;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 20px;
+}
+.section-title {
+    margin: 20px 0 10px;
+}
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-group div {
+    flex: 1;
+    margin: 5px;
+}
+.form-group div.full-width {
+    flex: 100%;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #555555;
+    color: #ffffff;
+}
+.upload-photo {
+    text-align: center;
+}
+.upload-photo img {
+    width: 80px;
+    margin: 10px 0;
+}
+.upload-photo button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcc00;
+    color: #333333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #ffcc00;
+    color: #333333;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
