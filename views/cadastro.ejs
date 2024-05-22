@@ -4,9 +4,12 @@
 <div class="cadastro">
     <h1>Cadastro</h1>
 
-    <div class="gato">
-        <h2>Detalhes Básicos | Gatos</h2>
+    <div class="dono">
+        <h2>Detalhes Básicos | Gato</h2>
+
+        
         <form action="" method="POST">
+
             <div class="input">
                 <label>Nome</label>
                 <input type="text" placeholder="Digite o Nome">
@@ -15,19 +18,47 @@
                 <label>Idade Estimada</label>
                 <input type="text" placeholder="Digite a idade">
             </div>
-            <div class="">
-                <label for="sexo">Sexo:</label>
-                <input type="radio" id="masculino" name="sexo" value="masculino">
-                <label for="masculino">Macho</label>
-                <input type="radio" id="feminino" name="sexo" value="feminino">
-                <label for="feminino">Fêmea</label>
+            
+            <label for="cat-gender">Sexo</label>
+            <select id="cat-gender" name="cat-gender">
+                <option value="" disabled selected>Selecione</option>
+                <option value="male">Macho</option>
+                <option value="female">Fêmea</option>
+            </select>
+    </div>
+
+    <div class="gato">
+        <h2>Detalhes Básicos | Dono</h2>
+        <form action="" method="POST">
+            <div class="input">
+                <label>Nome</label>
+                <input type="text" placeholder="Digite o Nome">
+            </div>
+            <label for="cat-gender">Estado</label>
+            <select id="cat-gender" name="cat-gender">
+                <option value="" disabled selected>Selecione</option>
+                <option value="male">SP</option>
+                <option value="female">RJ</option>
+                <option value="female">MG</option>
+                <option value="female">RS</option>
+                <option value="female">AC</option>
+                <option value="female">MA</option>
+            </select>
+            <label for="cat-gender">Cidade</label>
+            <select id="cat-gender" name="cat-gender">
+                <option value="" disabled selected>Selecione</option>
+                <option value="male">Registro</option>
+                <option value="female">Cajati</option>
+                <option value="female">Americana</option>
+                <option value="female">São Miguel do Arcanjo</option>
+                <option value="female">Parati</option>
+            </select>
+            
             </div>
         </form>
     </div>
 
-    <div class="dono">
-        
-    </div>
+    
 
 </div>
 
