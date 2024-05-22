@@ -2,12 +2,14 @@
 .cadastro {
     margin-top: 2.5rem;
     background-color: #444444;
-    padding: 20px;
+    padding: 2rem 5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 25rem;
     position: relative;
-    margin-left: 10rem ;
 }
+
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -24,7 +26,9 @@ h2{
 .form-group {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column  ;
     justify-content: space-between;
+
 }
 .form-group div {
     flex: 1;
@@ -44,6 +48,7 @@ input, select {
     border-radius: 5px;
     background-color: #555555;
     color: #ffffff;
+    margin: 20px 0px;
 }
 .upload-photo {
     text-align: center;

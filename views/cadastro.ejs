@@ -3,70 +3,31 @@
 
 <div class="cadastro">
     <h1>Cadastro</h1>
-    <div class="section-title">
-        <h2>Detalhes Básicos | Gato</h2>
+
+    <div class="gato">
+        <h2>Detalhes Básicos | Gatos</h2>
+        <form action="" method="POST">
+            <div class="input">
+                <label>Nome</label>
+                <input type="text" placeholder="Digite o Nome">
+            </div>
+            <div class="input">
+                <label>Idade Estimada</label>
+                <input type="text" placeholder="Digite a idade">
+            </div>
+            <div class="">
+                <label for="sexo">Sexo:</label>
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino">Macho</label>
+                <input type="radio" id="feminino" name="sexo" value="feminino">
+                <label for="feminino">Fêmea</label>
+            </div>
+        </form>
     </div>
-    <div class="form-group">
-        <div>
-            <label for="nome-gato">Nome</label>
-            <input type="text" id="nome-gato" placeholder="Digite o nome">
-        </div>
-        <div>
-            <label for="idade-gato">Idade estimada</label>
-            <input type="text" id="idade-gato" placeholder="Digite a idade">
-        </div>
-        <div>
-            <label for="sexo-gato">Sexo</label>
-            <select id="sexo-gato">
-                <option value="">Selecione</option>
-                <option value="macho">Macho</option>
-                <option value="femea">Fêmea</option>
-            </select>
-        </div>
+
+    <div class="dono">
+        
     </div>
-    <div class="form-group">
-        <div class="upload-photo full-width">
-            <img src="/img/photo-camera-icon.png" alt="Adicionar foto">
-            <button>Adicionar foto</button>
-        </div>
-        <div class="upload-photo full-width">
-            <button>Upload</button>
-        </div>
-    </div>
-    <div class="section-title">
-        <h2>Detalhes Básicos | Dono</h2>
-    </div>
-    <div class="form-group">
-        <div>
-            <label for="nome-dono">Nome</label>
-            <input type="text" id="nome-dono" placeholder="Digite o nome">
-        </div>
-        <div>
-            <label for="estado-dono">Estado</label>
-            <select id="estado-dono">
-                <option value="">Selecione</option>
-                <!-- Add state options here -->
-            </select>
-        </div>
-        <div>
-            <label for="cidade-dono">Cidade</label>
-            <select id="cidade-dono">
-                <option value="">Selecione</option>
-                <!-- Add city options here -->
-            </select>
-        </div>
-        <div>
-            <label for="contato-dono">Contato</label>
-            <input type="email" id="contato-dono" placeholder="Digite o email">
-        </div>
-        <div>
-            <label for="telefone-dono">Telefone</label>
-            <input type="text" id="telefone-dono" placeholder="Digite o telefone">
-        </div>
-        <div>
-            <label for="endereco-dono">Endereço</label>
-            <input type="text" id="endereco-dono" placeholder="Digite o endereço">
-        </div>
-    </div>
-    <button class="btn-submit">Salvar e Continuar</button>
+
 </div>
+
