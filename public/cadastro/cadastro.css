@@ -3,10 +3,23 @@
     margin-top: 2.5rem;
     background-color: #444444;
     padding: 2rem 5rem;
-    width: 100%;
+    width: 65%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-left: 25rem;
+    margin-left: 20%;
+    z-index: 0;
+
+}
+.container-cat h2{
+    margin-top: 3rem;
+}
+
+.dono{
+    display: flex;
+}
+
+.contact{
+    margin-left: 3rem;
 }
 
 h1 {
@@ -53,16 +66,17 @@ input, select {
     color: #333333;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 .btn-submit {
+    justify-content: center;
     display: block;
-    width: 100%;
     padding: 15px;
+    width: 100%;
     border: none;
     background-color: #ffcc00;
     color: #333333;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
-} */
+    margin-top: 2rem;
+} 
