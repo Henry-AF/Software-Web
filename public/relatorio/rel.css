@@ -1,0 +1,13 @@
+.relatorio {
+    margin-top: 2.5rem;
+    margin-left: 25rem;
+    position: absolute;
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
