@@ -4,29 +4,29 @@
 
         <div class="cadastro">
             <h1>Cadastro</h1>
-            <div class="container-cat">
-                <div class="gato">
-                    <h2>Detalhes Básicos | Gato</h2>
-                    <form action="" method="POST">
-                        <div class="input">
-                            <label>Nome</label>
-                            <input type="text" placeholder="Digite o Nome">
+            <div class="dono">
+                <form action="" method="POST">
+                    <div class="container-cat">
+                        <div class="gato">
+                            <h2>Detalhes Básicos | Gato</h2>
+
+                            <div class="input">
+                                <label>Nome</label>
+                                <input type="text" placeholder="Digite o Nome">
+                            </div>
+                            <div class="input">
+                                <label>Idade Estimada</label>
+                                <input type="text" placeholder="Digite a idade">
+                            </div>
+                            <label for="cat-gender">Sexo</label>
+                            <select id="cat-gender" name="cat-gender">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="male">Macho</option>
+                                <option value="female">Fêmea</option>
+                            </select>
+
                         </div>
-                        <div class="input">
-                            <label>Idade Estimada</label>
-                            <input type="text" placeholder="Digite a idade">
-                        </div>
-                        <label for="cat-gender">Sexo</label>
-                        <select id="cat-gender" name="cat-gender">
-                            <option value="" disabled selected>Selecione</option>
-                            <option value="male">Macho</option>
-                            <option value="female">Fêmea</option>
-                        </select>
-                    </form>
-                </div>
-                <h2>Detalhes Básicos | Dono</h2>
-                <div class="dono">
-                    <form action="" method="POST">
+                        <h2>Detalhes Básicos | Dono</h2>
                         <div class="dono">
                             <div class="input">
                                 <label>Nome</label>
@@ -51,17 +51,17 @@
                                     <option value="Parati">Parati</option>
                                 </select>
                             </div>
-                                <div class="contact">
-                                    <div class="input">
-                                        <label>Contato</label>
-                                        <input type="text" placeholder="Digite o Email">
-                                        <input type="text" placeholder="Digite o Telefone">
-                                        <input type="text" placeholder="Digite o Endereço">
-                                    </div>
+                            <div class="contact">
+                                <div class="input">
+                                    <label>Contato</label>
+                                    <input type="text" placeholder="Digite o Email">
+                                    <input type="text" placeholder="Digite o Telefone">
+                                    <input type="text" placeholder="Digite o Endereço">
                                 </div>
+                            </div>
                         </div>
                         <button type="submit" class="btn-submit">Salvar e Continuar</button>
-                    </form>
-                </div>
+                </form>
             </div>
+        </div>
         </div>
