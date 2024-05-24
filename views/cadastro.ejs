@@ -5,21 +5,21 @@
         <div class="cadastro">
             <h1>Cadastro</h1>
             <div class="dono">
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="container-cat">
                         <div class="gato">
                             <h2>Detalhes Básicos | Gato</h2>
 
                             <div class="input">
                                 <label>Nome</label>
-                                <input type="text" placeholder="Digite o Nome">
+                                <input type="text" placeholder="Digite o Nome" name="nomeGato">
                             </div>
                             <div class="input">
                                 <label>Idade Estimada</label>
-                                <input type="text" placeholder="Digite a idade">
+                                <input type="text" placeholder="Digite a idade" name="idadeGato">
                             </div>
                             <label for="cat-gender">Sexo</label>
-                            <select id="cat-gender" name="cat-gender">
+                            <select id="cat-gender" name="sexoGato">
                                 <option value="" disabled selected>Selecione</option>
                                 <option value="male">Macho</option>
                                 <option value="female">Fêmea</option>
@@ -30,9 +30,9 @@
                         <div class="dono">
                             <div class="input">
                                 <label>Nome</label>
-                                <input type="text" placeholder="Digite o Nome" required>
+                                <input type="text" placeholder="Digite o Nome" required name="nomeDono">
                                 <label for="state">Estado</label>
-                                <select id="state" name="state">
+                                <select id="state" name="estadoDono">
                                     <option value="" disabled selected>Selecione</option>
                                     <option value="SP">SP</option>
                                     <option value="RJ">RJ</option>
@@ -42,7 +42,7 @@
                                     <option value="MA">MA</option>
                                 </select>
                                 <label for="city">Cidade</label>
-                                <select id="city" name="city">
+                                <select id="city" name="cidadeDono">
                                     <option value="" disabled selected>Selecione</option>
                                     <option value="Registro">Registro</option>
                                     <option value="Cajati">Cajati</option>
@@ -54,9 +54,9 @@
                             <div class="contact">
                                 <div class="input">
                                     <label>Contato</label>
-                                    <input type="text" placeholder="Digite o Email">
-                                    <input type="text" placeholder="Digite o Telefone">
-                                    <input type="text" placeholder="Digite o Endereço">
+                                    <input type="text" placeholder="Digite o Email" name="emailDono">
+                                    <input type="text" placeholder="Digite o Telefone" name="telefoneDono">
+                                    <input type="text" placeholder="Digite o Endereço" name="enderecoDono">
                                 </div>
                             </div>
                         </div>
