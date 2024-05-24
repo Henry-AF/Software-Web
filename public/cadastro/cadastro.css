@@ -8,18 +8,20 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-left: 20%;
     z-index: 0;
-
 }
-.container-cat h2{
-    margin-top: 3rem;
+.dono-section h2{
+    margin-top: 2.5rem;
 }
-
+.gato{
+    display: flex;
+    margin-top: 2.5rem;
+}
 .dono{
     display: flex;
 }
 
 .contact{
-    margin-left: 3rem;
+    margin-left: 8.5rem;
 }
 
 h1 {
@@ -51,22 +53,35 @@ input, select {
     margin: 10px 0px;
 }
 
-/* .upload-photo {
-    text-align: center;
+.upload-container {
+    width: 300px;
+    height: 120px;
+    border: 3px dashed #cccccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #979696;
 }
-.upload-photo img {
-    width: 80px;
-    margin: 10px 0;
+.upload-container input[type="file"] {
+    display: none;
 }
-.upload-photo button {
-    display: inline-block;
-    padding: 10px 20px;
+.upload-button {
+    background-color: #f7b500;
     border: none;
-    background-color: #ffcc00;
-    color: #333333;
-    border-radius: 5px;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-} */
+    margin-bottom: 40px;
+    justify-content: center;
+}
+.container-img img{
+    margin-top: 20px;
+    width: 80px;
+    height: 50px;
+}
 .btn-submit {
     justify-content: center;
     display: block;
@@ -78,5 +93,42 @@ input, select {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 2rem;   
 } 
+
+
+.upload-image {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 120px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid #f7b500;
+    background-color: #444444;
+}
+
+.upload-image img{
+    width: 80px;
+    height: auto;
+    align-items: center;
+}
+.upload-image input[type="file"] {
+    display: none;
+}
+.upload-text {
+    color: #f7b500;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.upload-file{
+    margin-left: 8.5rem;
+    margin-top: 20px;
+}
+
+.upload-image{
+    margin-bottom: 2.5rem;
+}
