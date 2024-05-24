@@ -91,26 +91,15 @@ logging:
   file: logs/sistema.log
 ```
 
-## Contribuição
-
-Nós recebemos contribuições da comunidade de braços abertos. Para contribuir, siga estes passos:
-
-1. Faça um fork do repositório.
-2. Crie um novo branch (`git checkout -b feature/nome-da-sua-feature`).
-3. Commit suas mudanças (`git commit -am 'Adicionar nova feature'`).
-4. Push para o branch (`git push origin feature/nome-da-sua-feature`).
-5. Crie um novo Pull Request.
-
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
+Este projeto está licenciado sob a Licença.
 
 ## Agradecimentos
 
 Gostaríamos de agradecer às seguintes organizações e indivíduos pelo suporte e contribuições:
 
-- [OpenAI](https://www.openai.com) por seus modelos avançados de linguagem.
-- [Comunidade de Bioinformática](https://www.bioinformatics.org) por seus recursos e ferramentas valiosas.
+- [FATEC REGISTRO]([https://www.bioinformatics.org](https://fatecregistro.cps.sp.gov.br/)) por seus recursos e ferramentas valiosas.
 
 ---
 
