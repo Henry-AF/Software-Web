@@ -24,7 +24,7 @@ db.on("Erro", (error) => console.log(error));
 db.once("Open", () => console.log("Conectado ao banco de dados"))
 
 app.get("/", function(req,res){
-    res.render("index")
+    res.render("home")
 })
 
 app.use((req, res, next) => {

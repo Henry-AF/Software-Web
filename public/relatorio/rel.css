@@ -1,12 +1,15 @@
 .relatorio{
     margin-top: 2.5rem;
     width: 65%;
-    margin-left: 20%;
+    margin-left: 25%;
     z-index: 0;
 }
 
 h1{
     color: var(--cor-principal);
+    font-size: 40px;
+    text-align: start;
+    margin-top: 2.5rem;
 }
 
 .card-bord{

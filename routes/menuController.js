@@ -3,7 +3,7 @@ import { Router } from 'express';
 const router = Router();    
 
 router.get("/home", (req, res) => {
-    res.render("index")
+    res.render("home")
 })
 
 router.get("/cadastro", (req, res) => {
