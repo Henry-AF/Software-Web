@@ -1,6 +1,6 @@
-const { truncate } = require("fs")
-const mongoose = require('mongoose')
-const catSchema = new mongoose.catSchema({
+import mongoose from 'mongoose';
+
+const catSchema = new mongoose.Schema({
     nomeGato: {
         type: String,
         required: true
@@ -16,7 +16,7 @@ const catSchema = new mongoose.catSchema({
     nomeDono: {
         type: String,
         required: true
-    }, 
+    },
     emailDono: {
         type: String,
         required: true
@@ -36,7 +36,11 @@ const catSchema = new mongoose.catSchema({
     cidadeDono: {
         type: String,
         required: true
+    },
+    imagem: {
+        type: String,
+        required: false
     }
 });
 
-module.exports = mongoose.model("GatoDono", catSchema);
+export default mongoose.model("GatoDono", catSchema);

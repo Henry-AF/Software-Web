@@ -4,20 +4,15 @@
 
         <div class="relatorio">
 
-
-
             <div class="dropdown">
-
-                <button class="dropdown-button">Selecionar <img src="/relatorio/img/_.svg" alt=""></button>
-                
-
+                <button class="dropdown-button">Selecionar Gato <img src="/relatorio/img/_.svg" alt=""></button>
                 <div class="dropdown-content">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
+                    <% gatos.forEach(gato => { %>
+                        <a href="#"><%= gato.nomeGato %></a> <!-- Exibir o nome do gato -->
+                    <% }); %>
                 </div>
             </div>
+            
 
 
             <h1> Avaliações </h1>
