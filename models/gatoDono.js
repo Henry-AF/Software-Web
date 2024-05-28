@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { type } from 'os';
 
 const catSchema = new mongoose.Schema({
     nomeGato: {
@@ -38,6 +39,10 @@ const catSchema = new mongoose.Schema({
         required: true
     },
     imagem: {
+        type: String,
+        required: false
+    },
+    arquivoFASTA: {
         type: String,
         required: false
     }
