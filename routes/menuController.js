@@ -14,7 +14,8 @@ const storage = multer.diskStorage({
     }
 });
 
-router.get("/", async (req, res) => {
+// Adicionar rota para /home
+router.get("/home", async (req, res) => {
     try {
         const gatos = await CatDono.find(); // Buscar todos os gatos e donos do banco de dados
         res.render("home", { title: "Home", gatos: gatos }); // Passar os gatos para o modelo EJS
@@ -31,18 +32,6 @@ const upload = multer({ storage: storage });
 router.get("/cadastro", (req, res) => {
     res.render("cadastro", { title: "Adicionar" });
 });
-
-router.get("/relatorio", async (req, res) => {
-    try {
-        const gatos = await CatDono.find(); // Buscar todos os gatos cadastrados no banco de dados
-        res.render("relatorio", { title: "Relatório", gatos }); // Passar os gatos para o modelo EJS
-    } catch (error) {
-        console.error('Erro ao buscar gatos:', error);
-        res.status(500).send('Erro interno do servidor');
-    }
-});
-
-
 
 // Rota para receber os dados do formulário e salvar no banco de dados
 router.post("/cadastrar/new", upload.single('file'), (req, res) => {
@@ -83,17 +72,26 @@ router.post("/cadastrar/new", upload.single('file'), (req, res) => {
         });
 });
 
+// Rota para renderizar a home com os gatos e donos
+router.get("/", async (req, res) => {
+    try {
+        const gatos = await CatDono.find(); // Buscar todos os gatos e donos do banco de dados
+        res.render("home", { title: "Home", gatos: gatos }); // Passar os gatos para o modelo EJS
+    } catch (error) {
+        console.error('Erro ao buscar gatos:', error);
+        res.status(500).send('Erro interno do servidor');
+    }
+});
+
 // Outras rotas para renderizar as páginas
-router.get("/home", (req, res) => {
-    res.render("home");
-});
-
-router.get("/", (req, res) => {
-    res.render("home");
-});
-
-router.get("/relatorio", (req, res) => {
-    res.render("relatorio");
+router.get("/relatorio", async (req, res) => {
+    try {
+        const gatos = await CatDono.find();
+        res.render("relatorio", { title: "Relatório", gatos: gatos });
+    } catch (error) {
+        console.error('Erro ao buscar gatos:', error);
+        res.status(500).send('Erro interno do servidor');
+    }
 });
 
 router.get("/stats", (req, res) => {

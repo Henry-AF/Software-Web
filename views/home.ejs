@@ -16,15 +16,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% gatos.forEach(gato => { %>
+                    <% if (gatos && gatos.length > 0) { %>
+                        <% gatos.forEach(gato => { %>
+                            <tr>
+                                <td>ID <%= gato._id %></td>
+                                <td><%= gato.nomeGato %></td>
+                                <td><%= gato.nomeDono %></td>
+                                <td><%= gato.telefoneDono %></td>
+                                <td><%= new Date(gato.createdAt).toLocaleDateString() %></td>
+                            </tr>
+                        <% }); %>
+                    <% } else { %>
                         <tr>
-                            <td>ID <%= gato._id %></td>
-                            <td><%= gato.nomeGato %></td>
-                            <td><%= gato.nomeDono %></td>
-                            <td><%= gato.telefoneDono %></td>
-                            <td><%= new Date(gato.createdAt).toLocaleDateString() %></td> <!-- Assumindo que você tenha uma data de criação -->
+                            <td colspan="5">Nenhum acesso recente encontrado.</td>
                         </tr>
-                    <% }); %>
+                    <% } %>
                 </tbody>
             </table>
 
