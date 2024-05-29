@@ -16,41 +16,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>ID 3110/15</td>
-                        <td>Losango</td>
-                        <td>João Silva</td>
-                        <td>(11) 98765-4321</td>
-                        <td>20/05/2023</td>
-                    </tr>
-                    <tr>
-                        <td>ID 3110/14</td>
-                        <td>Asterisco</td>
-                        <td>Maria Oliveira</td>
-                        <td>(21) 91234-5678</td>
-                        <td>18/05/2023</td>
-                    </tr>
-                    <tr>
-                        <td>ID 3110/10</td>
-                        <td>Calabreso</td>
-                        <td>Pedro Souza</td>
-                        <td>(31) 99876-5432</td>
-                        <td>12/02/2023</td>
-                    </tr>
-                    <tr>
-                        <td>ID 3110/08</td>
-                        <td>Cuscuz</td>
-                        <td>Ana Lima</td>
-                        <td>(41) 93456-7890</td>
-                        <td>30/01/2023</td>
-                    </tr>
-                    <tr>
-                        <td>ID 3110/08</td>
-                        <td>Jeremo</td>
-                        <td>Carlos Pereira</td>
-                        <td>(51) 92345-6789</td>
-                        <td>12/01/2023</td>
-                    </tr>
+                    <% gatos.forEach(gato => { %>
+                        <tr>
+                            <td>ID <%= gato._id %></td>
+                            <td><%= gato.nomeGato %></td>
+                            <td><%= gato.nomeDono %></td>
+                            <td><%= gato.telefoneDono %></td>
+                            <td><%= new Date(gato.createdAt).toLocaleDateString() %></td> <!-- Assumindo que você tenha uma data de criação -->
+                        </tr>
+                    <% }); %>
                 </tbody>
             </table>
 

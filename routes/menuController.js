@@ -14,6 +14,17 @@ const storage = multer.diskStorage({
     }
 });
 
+router.get("/", async (req, res) => {
+    try {
+        const gatos = await CatDono.find(); // Buscar todos os gatos e donos do banco de dados
+        res.render("home", { title: "Home", gatos: gatos }); // Passar os gatos para o modelo EJS
+    } catch (error) {
+        console.error('Erro ao buscar gatos:', error);
+        res.status(500).send('Erro interno do servidor');
+    }
+});
+
+
 const upload = multer({ storage: storage });
 
 // Rota para renderizar a página de cadastro
