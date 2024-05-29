@@ -1,26 +1,56 @@
-.estatistica {
-    margin-top: 15%;
-    margin-left: 20%;
-    height: auto;
-    margin-bottom: 2%;
+
+.section-statisct {
+    margin-left:20rem;
+    padding: 0 2%;
+    flex: 1;
+    margin-bottom: 5rem;
 }
+
+.card-container {
+    margin-bottom: 5%;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.group div {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.card-group {
+    display: flex;
+}
+
 
 .card-chart {
     width: 600px;
     position: relative;
     background-color: var(--cor-fundo);
     border-radius: 20px;
-    padding: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
+    padding: 30px;
 
+}
+ 
 .card-chart-line{
-    width: 50rem;
+    width: 50;
     position: relative;
     background-color: var(--cor-fundo);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 5rem;
     margin-bottom: 2rem;
 }
 
@@ -45,9 +75,36 @@
 
 .group-card {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h3 {
     color: #fff;
     text-align: center;
+}
+
+
+
+.card-container{
+    margin-bottom: 5%;
+}
+
+.card{
+    margin-top: 2%;
+    display: flex;
+}
+
+.text-card{
+    color: #fff;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.text-card h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 400;
 }

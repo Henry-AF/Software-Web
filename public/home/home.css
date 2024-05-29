@@ -2,7 +2,7 @@
     font-family: Arial, sans-serif;
     color: #ffffff;
     padding: 10px;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 3.5rem;
 }
 .home-h1 {
@@ -53,8 +53,9 @@ tr:hover {
     background-color: #f7b500;
     border-radius: 10px;
     margin-top: 3.5rem;
-    width: 800px;   
-    height: 300px;
+    width: 60rem;
+    height: 25rem;
+    padding: 2rem;
 }
 
 .card-cat h3{
@@ -62,24 +63,44 @@ tr:hover {
     font-weight: 800;
     font-size: 16px;
     padding: 10px;
-    margin-left: 30%;
 }
 
-
-.group{
+.group-cat{
+    position: relative;
+    justify-content: space-between;
+}
+.group-cat{
     display: flex;
-    margin-left: 2rem;
-    color: #000;
+}
+.content-cat {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.cat-item {
+    display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
-
-.line{
-    display: flex;
+.cat-item img {
+    width: 50px; /* ajuste o tamanho conforme necessário */
+    height: auto;
 }
 
-.line p{
-    margin-left: 2px;
-    margin-bottom: 0.3rem;
-    margin-left: 1rem;
+.cat-item p {
+    margin: 0;
+}
+
+.img-cat img{
+    margin-left: 38%;
+}
+
+.group-cat p{
+    color: #000;
+    margin-left: 10px;
 }
