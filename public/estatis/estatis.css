@@ -1,9 +1,9 @@
 
 .section-statisct {
-    margin-left:20rem;
+    margin-left:20%;
     padding: 0 2%;
     flex: 1;
-    margin-bottom: 5rem;
+    margin-bottom: 4%;
 }
 
 .card-container {
@@ -13,8 +13,9 @@
 .group {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 2rem;
+    align-items: center;
+    margin-top: 2%;
 }
 
 .group div {
@@ -46,7 +47,6 @@ input[type="text"] {
 }
  
 .card-chart-line{
-    width: 50;
     position: relative;
     background-color: var(--cor-fundo);
     border-radius: 20px;
@@ -54,28 +54,23 @@ input[type="text"] {
     margin-bottom: 2rem;
 }
 
-.chart-content-line{
-    justify-content: center;
-}
+
 .card-chart-pie {
-    width: 400px;
+    width: 22rem;
     background-color: var(--cor-fundo);
     border-radius: 20px;
     padding: 2rem;
-    margin-left: 20px;
+    margin-left: 10px;
     justify-content: center;
-    margin-left: 20px;
 }
 
 .chart-container {
-    position: absolute;
     border-radius: 10px;
     padding: 1rem;
 }
 
 .group-card {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 

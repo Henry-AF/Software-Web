@@ -6,10 +6,15 @@
     <div class="card-container">
         <div class="group">
             <h1 style="color: #fff;">Resultado</h1>
-            <div>
-                <label for="">Nome:</label>
-                <input type="text" id="nome" placeholder="Nome: " style="color: #fff;">
+            <div class="dropdown">
+                <button class="dropdown-button">Selecionar Gato <img src="/relatorio/img/_.svg" alt=""></button>
+                <div class="dropdown-content">
+                    <% gatos.forEach(gato => { %>
+                        <a href="#"><%= gato.nomeGato %></a> <!-- Exibir o nome do gato -->
+                    <% }); %>
+                </div>
             </div>
+            
             <div>
                 <label for="id">ID:</label>
                 <input type="text" id="id" placeholder="ID: " style="margin-left: 5px;">

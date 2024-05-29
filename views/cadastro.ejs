@@ -3,7 +3,7 @@
 
 
         <div class="cadastro">
-            <h1>Cadastro</h1>
+            <h1>Cadastro para análise</h1>
             <div class="dono">
                 <form action="/cadastrar/new" method="POST" enctype="multipart/form-data">
                     <div class="container-cat">
@@ -26,10 +26,14 @@
                                 </select>
                             </div>
                             <div class="upload-file">
-                                <div class="upload-image" onclick="document.getElementById('file-upload').click();">
-                                    <img src="/cadastro/img/ion_camera.svg" alt="Camera Icon">
-                                    <input type="file" id="file-upload" name="file">
+                                <div class="upload">
+                                    <div class="upload-image" onclick="document.getElementById('file-upload').click();">
+                                        <img src="/cadastro/img/ion_camera.svg" alt="Camera Icon">
+                                        <input type="file" id="file-upload" name="file">
+                                    </div>
+                                    <p>Adicionar Imagem</p> 
                                 </div>
+                        
                                 <div class="upload-container">
                                     <script>
                                         document.querySelector('.upload-container').addEventListener('click', function() {
@@ -45,7 +49,7 @@
                             </div>
                         </div>
                         <div class="dono-section">
-                            <h2>Detalhes Básicos | Dono</h2>
+                            <h2>Detalhes Básicos | Proprietário</h2>
                             <div class="dono">
                                 <div class="input">
                                     <label>Nome</label>
