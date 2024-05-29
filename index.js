@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 4000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -62,3 +63,6 @@ app.use(cfg)
 
 import home from "./routes/menuController.js"
 app.use(home)
+
+import editar from "./routes/menuController.js"
+app.use(editar)

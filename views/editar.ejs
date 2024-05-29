@@ -1,0 +1,86 @@
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/menu-navbar.ejs') %>
+
+    <div class="cadastro">
+        <h1>Editar Cadastro</h1>
+        <div class="dono">
+            <form action="/editar/<%= gato.id %>" method="POST" enctype="multipart/form-data"> 
+                <div class="container-cat">
+                    <div class="gato">
+                        <div class="info-cat">
+                            <h2>Detalhes Básicos | Gato</h2>
+                            <div class="input">
+                                <label>Nome</label>
+                                <input type="text" name="nomeGato" value="<%= gato.nome %>" required>
+                            </div>
+                            <div class="input">
+                                <label>Idade Estimada</label>
+                                <input type="text" name="idadeGato" value="<%= gato.idade %>" required>
+                            </div>
+                            <label for="cat-gender">Sexo</label>
+                            <select id="cat-gender" name="sexoGato" required>
+                                <option value="" disabled>Selecione</option>
+                                <option value="male" <%= gato.sexo === 'male' ? 'selected' : '' %>>Macho</option>
+                                <option value="female" <%= gato.sexo === 'female' ? 'selected' : '' %>>Fêmea</option>
+                            </select>
+                        </div>
+                        <div class="upload-file">
+                            <div class="upload-image" onclick="document.getElementById('file-upload').click();">
+                                <img src="/cadastro/img/ion_camera.svg" alt="Camera Icon">
+                                <input type="file" id="file-upload" name="file">
+                            </div>
+                            <div class="upload-container">
+                                <script>
+                                    document.querySelector('.upload-container').addEventListener('click', function() {
+                                        document.getElementById('file-upload').click();
+                                    });
+                                </script>
+                                <div class="container-img">
+                                    <img src="/cadastro/img/arquivos.svg" alt="Upload Icon" class="upload-icon">
+                                    <input type="file" id="file-upload" name="file">
+                                    <label for="file-upload" class="upload-button">Upload</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dono-section">
+                        <h2>Detalhes Básicos | Dono</h2>
+                        <div class="dono">
+                            <div class="input">
+                                <label>Nome</label>
+                                <input type="text" name="nomeDono" value="<%= dono.nome %>" required>
+                                <label for="state">Estado</label>
+                                <select id="state" name="estadoDono" required>
+                                    <option value="" disabled>Selecione</option>
+                                    <option value="SP" <%= dono.estado === 'SP' ? 'selected' : '' %>>SP</option>
+                                    <option value="RJ" <%= dono.estado === 'RJ' ? 'selected' : '' %>>RJ</option>
+                                    <option value="MG" <%= dono.estado === 'MG' ? 'selected' : '' %>>MG</option>
+                                    <option value="RS" <%= dono.estado === 'RS' ? 'selected' : '' %>>RS</option>
+                                    <option value="AC" <%= dono.estado === 'AC' ? 'selected' : '' %>>AC</option>
+                                    <option value="MA" <%= dono.estado === 'MA' ? 'selected' : '' %>>MA</option>
+                                </select>
+                                <label for="city">Cidade</label>
+                                <select id="city" name="cidadeDono" required>
+                                    <option value="" disabled>Selecione</option>
+                                    <option value="Registro" <%= dono.cidade === 'Registro' ? 'selected' : '' %>>Registro</option>
+                                    <option value="Cajati" <%= dono.cidade === 'Cajati' ? 'selected' : '' %>>Cajati</option>
+                                    <option value="Americana" <%= dono.cidade === 'Americana' ? 'selected' : '' %>>Americana</option>
+                                    <option value="São Miguel do Arcanjo" <%= dono.cidade === 'São Miguel do Arcanjo' ? 'selected' : '' %>>São Miguel do Arcanjo</option>
+                                    <option value="Parati" <%= dono.cidade === 'Parati' ? 'selected' : '' %>>Parati</option>
+                                </select>
+                            </div>
+                            <div class="contact">
+                                <div class="input">
+                                    <label>Contato</label>
+                                    <input type="email" name="emailDono" value="<%= dono.email %>" required>
+                                    <input type="text" name="telefoneDono" value="<%= dono.telefone %>" required>
+                                    <input type="text" name="enderecoDono" value="<%= dono.endereco %>" required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">Salvar e Continuar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

@@ -5,6 +5,7 @@ const CatDono = require("../models/gatoDono")
 const multer = require("multer")
 const fs = require("fs")
 import gatoDonoSevice from "../services/gatoDonoSevice";
+import { title } from "process";
 
 router.get("/cadastrar", (req, res) => {
     res.render("cadastro", {title: "Adiconar"})
@@ -43,6 +44,15 @@ router.post("/cadastrar/new", (req, res) => {
             res.redirect("/")
         })
 
+})
+
+router.get("/edit/:id", (req, res) => {
+    const id = req.params.id 
+    ClienteService.SelectOne(id).then((cliente) => {
+        res.render("editar", {
+            cliente : cliente
+        })
+    })
 })
 
 
