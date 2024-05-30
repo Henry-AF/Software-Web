@@ -1,2 +1,43 @@
 <%- include ('partials/header.ejs') %>
-<%- include ('partials/menu-navbar.ejs') %>
+    <%- include ('partials/menu-navbar.ejs') %>
+
+        <div class="section-config">
+            <div class="menu-config">
+                <a href="">← Voltar para o menu</a>
+            </div>
+            <div class="config-title">Configurações</div>
+            <div class="tabs">
+                <div class="tab">Meu plano</div>
+                <div class="tab">Senha</div>
+                <div class="tab active-tab">Notificações</div>
+                <div class="tab">Perfil</div>
+            </div>
+            <div class="content">
+                <div class="notification-settings">
+                    <p>Configurações de notificação</p>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout.</p>
+                </div>
+                <div class="toggle-group">
+                    <label for="whatsapp">WhatsApp</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="whatsapp" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-group">
+                    <label for="email">E-mail</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="email" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-group">
+                    <label for="sms">SMS</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="sms">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>

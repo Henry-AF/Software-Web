@@ -12,11 +12,6 @@ h1{
     margin-top: 2.5rem;
 }
 
-.card-bord{
-    padding: 10px 20px;
-    border: 2px solid var(--cor-menu-letras);
-    margin-bottom: 2rem;
-}
 
 .download{  
     display: flex;
@@ -29,11 +24,13 @@ h1{
     margin-left: 20px;
 }
 
-.content{ 
-    margin-top: 2rem;
+.content{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    background-color: var(--cor-fundo);
+    margin-top: 1rem;
+    border: 2px solid var(--cor-menu-letras);
+    margin-bottom: 2rem;
 }
 
 .dropdown {
@@ -62,7 +59,6 @@ h1{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 4px;
 }
 
 /* Itens do dropdown */
