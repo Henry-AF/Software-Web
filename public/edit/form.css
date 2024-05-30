@@ -1,0 +1,53 @@
+.card-edit{
+    margin-top: 2.5rem;
+    background-color: #444444;
+    padding: 2rem 5rem;
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 25%;
+    z-index: 0;
+    text-align: start;
+}
+
+.card-edit h3{
+    position: absolute; 
+    margin-top: 2rem;
+}
+
+.cat-info{
+    margin-top: 7rem;
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.dono-info{
+    display: flex;
+    margin-top: 11rem;
+}
+.info-2{
+    margin-left: 26%;
+}
+
+.salvar{
+    background-color: #444444;
+    border: 2px solid var(--cor-principal); 
+    color: var(--cor-principal);
+    padding: 8px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 2rem;
+    margin-left: 50%;
+}
+
+.excluir{
+    background-color: #444444;
+    border: 2px solid #FFAAAA; 
+    color: #FFAAAA;
+    padding: 8px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 2rem;
+}

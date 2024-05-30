@@ -1,44 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<body>
-    <h1>Editar Gato</h1>
-    <form action="/edit/<%= gato._id %>" method="POST" enctype="multipart/form-data">
-        <label for="nomeGato">Nome do Gato:</label>
-        <input type="text" id="nomeGato" name="nomeGato" value="<%= gato.nomeGato %>" required><br>
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/menu-navbar.ejs') %>
 
-        <label for="idadeGato">Idade do Gato:</label>
-        <input type="text" id="idadeGato" name="idadeGato" value="<%= gato.idadeGato %>" required><br>
+        <body>
+            <div class="card-edit">
+                <form action="/edit/<%= gato._id %>" method="POST" enctype="multipart/form-data">
+                    <h1>Editar Informações</h1>
 
-        <label for="sexoGato">Sexo do Gato:</label>
-        <input type="text" id="sexoGato" name="sexoGato" value="<%= gato.sexoGato %>" required><br>
+                        <h3>Gato Cadastrado</h3>
+                    <div class="cat-info">
+                        <div class="info-1">
+                            <label for="nomeGato">Nome:</label>
+                            <input type="text" id="nomeGato" name="nomeGato" value="<%= gato.nomeGato %>" required><br>
 
-        <label for="nomeDono">Nome do Dono:</label>
-        <input type="text" id="nomeDono" name="nomeDono" value="<%= gato.nomeDono %>" required><br>
+                            <label for="idadeGato">Idade:</label>
+                            <input type="text" id="idadeGato" name="idadeGato" value="<%= gato.idadeGato %>"
+                                required><br>
+                        </div>
 
-        <label for="estadoDono">Estado do Dono:</label>
-        <input type="text" id="estadoDono" name="estadoDono" value="<%= gato.estadoDono %>" required><br>
+                        <div class="info-2">
+                            <label for="sexoGato">Sexo:</label>
+                            <input type="text" id="sexoGato" name="sexoGato" value="<%= gato.sexoGato %>" required><br>
+                            <label for="imagem">Imagem:</label>
+                            <input type="file" id="imagem" name="file"><br> 
+                        </div>
 
-        <label for="cidadeDono">Cidade do Dono:</label>
-        <input type="text" id="cidadeDono" name="cidadeDono" value="<%= gato.cidadeDono %>" required><br>
+                    </div>
 
-        <label for="emailDono">Email do Dono:</label>
-        <input type="email" id="emailDono" name="emailDono" value="<%= gato.emailDono %>" required><br>
+                    <h3>Proprietário Cadastrado</h3>
+                    <div class="dono-info">
 
-        <label for="telefoneDono">Telefone do Dono:</label>
-        <input type="text" id="telefoneDono" name="telefoneDono" value="<%= gato.telefoneDono %>" required><br>
+                        <div class="info-1">
+                            <label for="nomeDono">Nome do Dono:</label>
+                            <input type="text" id="nomeDono" name="nomeDono" value="<%= gato.nomeDono %>" required><br>
 
-        <label for="enderecoDono">Endereço do Dono:</label>
-        <input type="text" id="enderecoDono" name="enderecoDono" value="<%= gato.enderecoDono %>" required><br>
+                            <label for="estadoDono">Estado do Dono:</label>
+                            <input type="text" id="estadoDono" name="estadoDono" value="<%= gato.estadoDono %>"
+                                required><br>
 
-        <label for="imagem">Imagem:</label>
-        <input type="file" id="imagem" name="file"><br>
+                            <label for="cidadeDono">Cidade do Dono:</label>
+                            <input type="text" id="cidadeDono" name="cidadeDono" value="<%= gato.cidadeDono %>"
+                                required><br>
+                        </div>
 
-        <button type="submit">Salvar</button>
-    </form>
-</body>
-</html>
+                        .<div class="info-2">
+
+                            <label for="emailDono">Email do Dono:</label>
+                            <input type="email" id="emailDono" name="emailDono" value="<%= gato.emailDono %>" required><br>
+    
+                            <label for="telefoneDono">Telefone do Dono:</label>
+                            <input type="text" id="telefoneDono" name="telefoneDono" value="<%= gato.telefoneDono %>" required><br>
+    
+                            <label for="enderecoDono">Endereço do Dono:</label>
+                            <input type="text" id="enderecoDono" name="enderecoDono" value="<%= gato.enderecoDono %>" required><br>
+                        </div>
+                    
+                    </div>
+
+                    <div class="functions">
+                        <button class="excluir" type="submit">Excluir</button>
+                        <button class="salvar" type="submit">Salvar Alterações</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+        </body>
+
+        </html>
