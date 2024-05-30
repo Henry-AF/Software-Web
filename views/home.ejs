@@ -13,6 +13,7 @@
                         <th>Nome do Dono</th>
                         <th>Contato</th>
                         <th>Data</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,15 +25,20 @@
                                 <td><%= gato.nomeDono %></td>
                                 <td><%= gato.telefoneDono %></td>
                                 <td><%= new Date(gato.createdAt).toLocaleDateString() %></td>
+                                <td>
+                                    <a href="/edit/<%= gato._id %>">Editar</a>
+                                </td>
                             </tr>
                         <% }); %>
                     <% } else { %>
                         <tr>
-                            <td colspan="5">Nenhum acesso recente encontrado.</td>
+                            <td colspan="6">Nenhum acesso recente encontrado.</td>
                         </tr>
                     <% } %>
                 </tbody>
             </table>
+            
+            
 
 
             <div class="card-cat">

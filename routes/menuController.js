@@ -14,26 +14,68 @@ const storage = multer.diskStorage({
     }
 });
 
-// Adicionar rota para /home
-router.get("/home", async (req, res) => {
+const upload = multer({ storage: storage });
+
+// Rota para renderizar o formulário de edição de um gato específico
+router.get("/edit/:id", async (req, res) => {
     try {
-        const gatos = await CatDono.find(); // Buscar todos os gatos e donos do banco de dados
-        res.render("home", { title: "Home", gatos: gatos }); // Passar os gatos para o modelo EJS
+        const gato = await CatDono.findById(req.params.id);
+        if (!gato) {
+            return res.status(404).send("Gato não encontrado");
+        }
+        res.render("edit", { title: "Editar Gato", gato: gato });
     } catch (error) {
-        console.error('Erro ao buscar gatos:', error);
+        console.error('Erro ao buscar gato:', error);
         res.status(500).send('Erro interno do servidor');
     }
 });
 
+// Rota para atualizar os dados de um gato específico
+router.post("/edit/:id", upload.single('file'), async (req, res) => {
+    const { nomeGato, idadeGato, sexoGato, nomeDono, estadoDono, cidadeDono, emailDono, telefoneDono, enderecoDono } = req.body;
+    const imagem = req.file ? req.file.path : null;
 
-const upload = multer({ storage: storage });
+    try {
+        const gato = await CatDono.findById(req.params.id);
+        if (!gato) {
+            return res.status(404).send("Gato não encontrado");
+        }
 
-// Rota para renderizar a página de cadastro
+        gato.nomeGato = nomeGato;
+        gato.idadeGato = idadeGato;
+        gato.sexoGato = sexoGato;
+        gato.nomeDono = nomeDono;
+        gato.estadoDono = estadoDono;
+        gato.cidadeDono = cidadeDono;
+        gato.emailDono = emailDono;
+        gato.telefoneDono = telefoneDono;
+        gato.enderecoDono = enderecoDono;
+        if (imagem) {
+            gato.imagem = imagem;
+        }
+
+        await gato.save();
+
+        req.session.message = {
+            type: "success",
+            message: "Gato atualizado com sucesso!"
+        };
+        res.redirect("/");
+    } catch (error) {
+        console.error('Erro ao atualizar gato:', error);
+        req.session.message = {
+            type: "error",
+            message: "Erro ao atualizar gato. Por favor, tente novamente"
+        };
+        res.redirect("/");
+    }
+});
+
+// Outras rotas para renderizar as páginas
 router.get("/cadastro", (req, res) => {
     res.render("cadastro", { title: "Adicionar" });
 });
 
-// Rota para receber os dados do formulário e salvar no banco de dados
 router.post("/cadastrar/new", upload.single('file'), (req, res) => {
     const { nomeGato, idadeGato, sexoGato, nomeDono, estadoDono, cidadeDono, emailDono, telefoneDono, enderecoDono } = req.body;
     const imagem = req.file ? req.file.path : null;
@@ -72,7 +114,6 @@ router.post("/cadastrar/new", upload.single('file'), (req, res) => {
         });
 });
 
-// Rota para renderizar a home com os gatos e donos
 router.get("/", async (req, res) => {
     try {
         const gatos = await CatDono.find(); // Buscar todos os gatos e donos do banco de dados
@@ -83,7 +124,6 @@ router.get("/", async (req, res) => {
     }
 });
 
-// Outras rotas para renderizar as páginas
 router.get("/relatorio", async (req, res) => {
     try {
         const gatos = await CatDono.find();
